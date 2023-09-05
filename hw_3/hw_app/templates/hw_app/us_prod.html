@@ -1,0 +1,19 @@
+{% extends 'hw_app/base.html' %}
+
+{% block title %}
+    Карзина клиента
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        {{ head }}
+        <ol>
+            {% for el in user_products %}
+                <li>
+                    {{ add_day }}<br>
+                    {{ el.name }} - <b>{{ el.price }}</b>
+                </li>
+            {% endfor %}
+        </ol>
+    </div>
+{% endblock %}
